@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<link href="styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <img id="myImage" src="image1.jpg" alt="Gallery Image" />
+<button id="nextBtn">➡️</button>
+
+<script>
+  const images = ["image1.jpg", "image2.jpg", "image3.jpg"];
+  let index = 0;
+
+  const img = document.getElementById("myImage");
+  const btn = document.getElementById("nextBtn");
+
+  btn.addEventListener("click", () => {
+    index = (index + 1) % images.length;
+    img.src = images[index];
+  });
+</script>
+
+</body>
+</html>
